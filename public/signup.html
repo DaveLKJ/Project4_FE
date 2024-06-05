@@ -135,7 +135,7 @@
           <div class="col-lg-8 offset-lg-2 text-center">
             <div class="breadcrumb-text">
               <p>Greatest coffee</p>
-              <h1>Login</h1>
+              <h1>Signup</h1>
             </div>
           </div>
         </div>
@@ -146,7 +146,7 @@
     <!-- login -->
     <main class="form-signin w-100 m-auto">
       <form>
-        <h1 class="h3 mb-3 fw-normal">Login</h1>
+        <h1 class="h3 mb-3 fw-normal">Signup</h1>
 
         <div class="form-floating">
           <label for="floatingInput">Email address</label>
@@ -162,20 +162,26 @@
           <label for="floatingPassword">Password</label>
           <input
             type="password"
+            id="password"
+            name="password"
             class="form-control"
-            id="floatingPassword"
             placeholder="Password"
           />
         </div>
         <p></p>
         <div class="form-floating">
-          <label class="form-check-label" for="flexCheckDefault">
-            Don't have an account? <a href="signup.html">Sign up</a>
-          </label>
+          <label for="floatingPassword">Confirm Password</label>
+          <input
+            type="password"
+            id="password2"
+            name="password2"
+            class="form-control"
+            placeholder="Confirm Password"
+          />
         </div>
-
+        <p></p>
         <button class="btn btn-primary w-100 py-2" type="submit">
-          Sign in
+          Sign up
         </button>
         <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2024</p>
       </form>
