@@ -145,51 +145,49 @@
 
     <!-- signup form -->
     <main class="form-signin w-100 m-auto">
-      <form>
+      <form id="registerForm">
         <h1 class="h3 mb-3 fw-normal">Signup</h1>
 
-        <form id="registerForm">
-          <div class="form-floating">
-            <label for="floatingInput">Email address</label>
-            <input
-              type="email"
-              class="form-control"
-              id="floatingInput"
-              placeholder="name@example.com"
-              required
-            />
-          </div>
-          <p></p>
-          <div class="form-floating">
-            <label for="floatingPassword">Password</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              class="form-control"
-              placeholder="Password"
-              required
-            />
-          </div>
-          <p></p>
-          <div class="form-floating">
-            <label for="floatingPassword">Confirm Password</label>
-            <input
-              type="password"
-              id="password2"
-              name="password2"
-              class="form-control"
-              placeholder="Confirm Password"
-              required
-            />
-          </div>
-          <p></p>
-          <button class="btn btn-primary w-100 py-2" type="submit">
-            Sign up
-          </button>
-        </form>
-        <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2024</p>
+        <div class="form-floating">
+          <label for="floatingInput">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="floatingInput"
+            placeholder="name@example.com"
+            required
+          />
+        </div>
+        <p></p>
+        <div class="form-floating">
+          <label for="floatingPassword">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="form-control"
+            placeholder="Password"
+            required
+          />
+        </div>
+        <p></p>
+        <div class="form-floating">
+          <label for="floatingPassword">Confirm Password</label>
+          <input
+            type="password"
+            id="password2"
+            name="password2"
+            class="form-control"
+            placeholder="Confirm Password"
+            required
+          />
+        </div>
+        <p></p>
+        <button class="btn btn-primary w-100 py-2" type="submit">
+          Sign up
+        </button>
       </form>
+      <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2024</p>
     </main>
     <!-- end signup form -->
 
@@ -342,36 +340,38 @@
 
     <!-- For form submission -->
     <script>
-      document
-        .getElementById("registerForm")
-        .addEventListener("submit", async function (event) {
-          event.preventDefault();
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("registerForm")
+          .addEventListener("submit", async function (event) {
+            event.preventDefault();
 
-          const email = document.getElementById("floatingInput").value;
-          const password = document.getElementById("password").value;
-          const password2 = document.getElementbyId("password2").value;
+            const email = document.getElementById("floatingInput").value;
+            const password = document.getElementById("password").value;
+            const password2 = document.getElementById("password2").value;
 
-          if (password !== password2) {
-            alert("Passwords do not match");
-            return;
-          }
+            if (password !== password2) {
+              alert("Passwords do not match");
+              return;
+            }
 
-          const response = await fetch("/users/signup", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ email, password }),
+            const response = await fetch("/users/signup", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ email, password }),
+            });
+
+            const result = await response.json();
+            if (response.ok) {
+              alert("Signup successful");
+              window.location.href = "login.html";
+            } else {
+              alert(`Signup failed: ${result.message}`);
+            }
           });
-
-          const result = await response.json();
-          if (response.ok) {
-            alert("Signup successful");
-            windoe.location.href = "login.html";
-          } else {
-            alert("`Signup failed: ${result.message}");
-          }
-        });
+      });
     </script>
     <!-- End of form submission -->
   </body>
