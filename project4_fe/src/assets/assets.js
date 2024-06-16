@@ -1,6 +1,6 @@
 import basket_icon from "./basket_icon.png";
 import logo from "./logo.png";
-import header_img from "./header_img.png";
+import header_img from "./header.png";
 import search_icon from "./search_icon.png";
 
 import add_icon_white from "./add_icon_white.png";
@@ -19,15 +19,15 @@ import bag_icon from "./bag_icon.png";
 import logout_icon from "./logout_icon.png";
 import parcel_icon from "./parcel_icon.png";
 
-import blended from "blended.png";
-import single_origin from "single_origin.png";
+import blended from "./blended.png";
+import single_origin from "./single_origin.png";
 
-import brazil_santos from "./brazil-santos.png";
-import ethiopian_apex_trio from "ethiopian_apex_trio.png";
-import ethiopian_guji_shakiso from "ethiopian_guji_shakiso.png";
-import guatemala_geisha_el_mirador from "guatemala_geisha_el_mirador.png";
-import jamaica_blue_mountain from "jamaica_blue_mountain.png";
-import nanyang_kopi from "nanyang_kopi.png";
+import brazil_santos from "./brazil_santos.png";
+import ethiopian_apex_trio from "./ethiopian_apex_trio.png";
+import ethiopian_guji_shakiso from "./ethiopian_guji_shakiso.png";
+import guatemala_geisha_el_mirador from "./guatemala_geisha_el_mirador.png";
+import jamaica_blue_mountain from "./jamaica_blue_mountain.png";
+import nanyang_kopi from "./nanyang_kopi.png";
 
 export const assets = {
   logo,
