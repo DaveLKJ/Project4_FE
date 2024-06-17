@@ -57,7 +57,7 @@ export const menu_list = [
     menu_image: blended,
   },
   {
-    menu_name: "Single_origin",
+    menu_name: "Single origin",
     menu_image: single_origin,
   },
 ];
@@ -69,7 +69,7 @@ export const coffee_list = [
     image: brazil_santos,
     price: 12,
     description: "Tasteful notes to flavour your day",
-    category: "coffee bean",
+    category: "Single origin",
   },
   {
     _id: "2",
@@ -77,7 +77,7 @@ export const coffee_list = [
     image: ethiopian_apex_trio,
     price: 18,
     description: "Tasteful notes to flavour your day",
-    category: "coffee bean",
+    category: "Single origin",
   },
   {
     _id: "3",
@@ -85,7 +85,7 @@ export const coffee_list = [
     image: ethiopian_guji_shakiso,
     price: 16,
     description: "Tasteful notes to flavour your day",
-    category: "coffee bean",
+    category: "Single origin",
   },
   {
     _id: "4",
@@ -93,7 +93,7 @@ export const coffee_list = [
     image: guatemala_geisha_el_mirador,
     price: 24,
     description: "Tasteful notes to flavour your day",
-    category: "coffee bean",
+    category: "Single originn",
   },
   {
     _id: "5",
@@ -101,7 +101,7 @@ export const coffee_list = [
     image: jamaica_blue_mountain,
     price: 14,
     description: "Tasteful notes to flavour your day",
-    category: "coffee bean",
+    category: "Single origin",
   },
   {
     _id: "6",
@@ -109,6 +109,6 @@ export const coffee_list = [
     image: nanyang_kopi,
     price: 12,
     description: "Tasteful notes to flavour your day",
-    category: "coffee bean",
+    category: "Blended",
   },
 ];

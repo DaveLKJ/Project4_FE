@@ -12,16 +12,18 @@ const CoffeeDisplay = ({ category }) => {
       <h2>Select your poison</h2>
       <div className="coffee-display-list">
         {coffee_list.map((item, index) => {
-          return (
-            <CoffeeItem
-              key={index}
-              id={item._id}
-              name={item.name}
-              description={item.description}
-              price={item.price}
-              image={item.image}
-            />
-          );
+          if (category === "All" || category === item.category) {
+            return (
+              <CoffeeItem
+                key={index}
+                id={item._id}
+                name={item.name}
+                description={item.description}
+                price={item.price}
+                image={item.image}
+              />
+            );
+          }
         })}
       </div>
     </div>
