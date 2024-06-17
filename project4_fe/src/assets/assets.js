@@ -51,13 +51,13 @@ export const assets = {
   parcel_icon,
 };
 
-export const type_list = [
+export const menu_list = [
   {
-    menu_name: "blended",
+    menu_name: "Blended",
     menu_image: blended,
   },
   {
-    menu_name: "single_origin",
+    menu_name: "Single_origin",
     menu_image: single_origin,
   },
 ];
