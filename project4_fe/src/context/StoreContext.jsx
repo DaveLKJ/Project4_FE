@@ -5,7 +5,7 @@ export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
-  const url = "http://localhost:6001";
+  const url = "https://project4-be-oulv.onrender.com";
   const [token, setToken] = useState("");
   const [coffee_list, setCoffeeList] = useState([]);
 
